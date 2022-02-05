@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { Header } from "./components/Header";
+import "./App.css";
+import { Projects } from "./components/Projects";
 
-function App() {
+const projectsFromApi = [
+  {
+    title: "Project 1",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, eligendi repudiandae? Cum modi eos earum minus, beatae, obcaecati officiis facilis, et neque reiciendis officia consequatur quam? Sint, aspernatur? Quasi, commodi!",
+    link: "https://www.google.co.uk/",
+  },
+  {
+    title: "Project 2",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, eligendi repudiandae? Cum modi eos earum minus, beatae, obcaecati officiis facilis, et neque reiciendis officia consequatur quam? Sint, aspernatur? Quasi, commodi!",
+    link: "https://www.google.co.uk/",
+  },
+  {
+    title: "Project 3",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, eligendi repudiandae? Cum modi eos earum minus, beatae, obcaecati officiis facilis, et neque reiciendis officia consequatur quam? Sint, aspernatur? Quasi, commodi!",
+    link: "https://www.google.co.uk/",
+  },
+  {
+    title: "Project 4",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, eligendi repudiandae? Cum modi eos earum minus, beatae, obcaecati officiis facilis, et neque reiciendis officia consequatur quam? Sint, aspernatur? Quasi, commodi!",
+    link: "https://www.google.co.uk/",
+  },
+];
+
+const App = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header title="Bob Smith" subTitle="Full Stack Developer" />
+      <main>
+        <Projects projects={projectsFromApi} />
+      </main>
     </div>
   );
-}
+};
 
 export default App;
